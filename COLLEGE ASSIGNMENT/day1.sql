@@ -179,7 +179,44 @@ VALUES
 SELECT * FROM Orders;
 
 
+USE College;
+SHOW tables;
+
+CREATE TABLE Bank(
+AccNo INT PRIMARY KEY,
+Name varchar(20),
+Balance INT NOT NULL,
+Type VARCHAR(40),
+Branch VARCHAR(20)
+);
+DESCRIBE Bank;
+INSERT INTO Bank(AccNo,Name,Balance,Type,Branch)
+VALUES
+(0111,'Arip',1000,'Current','Delhi'),
+(0222,'Raj',12000,'Savings','Kol'),
+(0333,'Amit',1500,'Current','Delhi'),
+(0444,'Suman',10,'Savings','Mum'),
+(0555,'Rik',500,'Savings','Kol');
+
+SELECT * FROM Bank;
 
 
+CREATE TABLE Transport(
+VechileNo VARCHAR(30) PRIMARY KEY,
+Type VARCHAR(40),
+Capacity VARCHAR(20),
+Driver VARCHAR(20),
+Route VARCHAR(40)
+);
+DESCRIBE Transport;
+INSERT INTO Transport(VechileNo,Type,Capacity,Driver,Route)
+VALUES
+('WB00A11','Bus',50,'Kiran','Delhi-Agra'),
+('WB00A22','Truck','20 Tons','Anil','Mum-Pune'),
+('WB00A33','Taxi',5,'Ramesh','Kol'),
+('WB00A44','Train',500,'Ashok','Delhi-Jaipur'),
+('WB00A55','Bus',60,'Suresh','Howrah');
+
+SELECT * FROM Transport;
 
 
